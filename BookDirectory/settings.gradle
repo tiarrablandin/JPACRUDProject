@@ -1,0 +1,3 @@
+rootProject.name = 'BookDirectory'
+
+includeFlat 'JPABooks'
