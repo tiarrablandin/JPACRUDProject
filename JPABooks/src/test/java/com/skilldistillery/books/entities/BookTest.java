@@ -3,6 +3,8 @@ package com.skilldistillery.books.entities;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
+import java.time.LocalDateTime;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -45,6 +47,18 @@ class BookTest {
 	void test() {
 		assertNotNull(book);
 		assertEquals("Sample Title", book.getTitle());
+		assertEquals("Fake Author", book.getAuthor());
+		assertEquals("Fake", book.getGenre());
+		assertEquals(false, book.isSeries());
+		assertEquals(null, book.getSeriesName());
+		assertEquals(null, book.getNumber());
+		assertEquals("Fake", book.getDescription());
+		assertEquals(null, book.getPageCount());
+		assertEquals(2022, book.getReleaseDate().getYear());
+		assertEquals(8, book.getReleaseDate().getMonthValue());
+		assertEquals(12, book.getReleaseDate().getDayOfMonth());
+		assertEquals(2022, book.getDateCreated().getYear());
+		assertEquals(null, book.getDateUpdated());
 	}
 
 }
