@@ -30,7 +30,6 @@
 		      <th scope="col">Series Number</th>
 		      <th scope="col">Description</th>
 		      <th scope="col">Page Count</th>
-		      <th scope="col">Release Date</th>
 		      <th scope="col">Date Created</th>
 		      <th scope="col">Date Updated</th>
 		      <th scope="col">Edit/Delete</th>
@@ -41,7 +40,7 @@
 		  <tbody>
 		    <tr>
 		      <th scope="row">${book.id}</th>
-		      <td><a href="edit.do">${book.title}</a></td>
+		      <td><a href="edit.do?id=${book.id}">${book.title}</a></td>
 		      <td>${book.author}</td>
 		      <td>${book.genre}</td>
 		      <td>${book.series}</td>
@@ -49,7 +48,6 @@
 		      <td>${book.number}</td>
 		      <td>${book.description}</td>
 		      <td>${book.pageCount}</td>
-		      <td>${book.releaseDate}</td>
 		      <td>${book.dateCreated}</td>
 		      <td>${book.dateUpdated}</td>
 		      <td>

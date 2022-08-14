@@ -46,17 +46,14 @@ class BookTest {
 	@Test
 	void test() {
 		assertNotNull(book);
-		assertEquals("Sample Title", book.getTitle());
-		assertEquals("Fake Author", book.getAuthor());
-		assertEquals("Fake", book.getGenre());
+		assertEquals("Test", book.getTitle());
+		assertEquals("Test", book.getAuthor());
+		assertEquals("Test", book.getGenre());
 		assertEquals(false, book.isSeries());
 		assertEquals(null, book.getSeriesName());
 		assertEquals(null, book.getNumber());
-		assertEquals("Fake", book.getDescription());
+		assertEquals("Test", book.getDescription());
 		assertEquals(null, book.getPageCount());
-		assertEquals(2022, book.getReleaseDate().getYear());
-		assertEquals(8, book.getReleaseDate().getMonthValue());
-		assertEquals(12, book.getReleaseDate().getDayOfMonth());
 		assertEquals(2022, book.getDateCreated().getYear());
 		assertEquals(null, book.getDateUpdated());
 	}

@@ -1,7 +1,6 @@
 package com.skilldistillery.books.entities;
 
 import java.time.LocalDateTime;
-import java.util.Date;
 import java.util.Objects;
 
 import javax.persistence.Column;
@@ -9,9 +8,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.print.attribute.standard.DateTimeAtCreation;
-
-import org.apache.log4j.helpers.DateTimeDateFormat;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
@@ -39,9 +35,6 @@ public class Book {
 	
 	@Column(name="page_count")
 	private Integer pageCount;
-	
-	@Column(name="release_date")
-	private LocalDateTime releaseDate;
 	
 	@CreationTimestamp
 	@Column(name="date_created")
@@ -127,14 +120,6 @@ public class Book {
 		this.pageCount = pageCount;
 	}
 
-	public LocalDateTime getReleaseDate() {
-		return releaseDate;
-	}
-
-	public void setReleaseDate(LocalDateTime releaseDate) {
-		this.releaseDate = releaseDate;
-	}
-
 	public LocalDateTime getDateCreated() {
 		return dateCreated;
 	}
@@ -170,9 +155,9 @@ public class Book {
 
 	@Override
 	public String toString() {
-		return "Book ID: " + id + "Title: " + title + "Author: " + author + " Genre:" + genre + " Series: " + series
+		return "Book ID: " + id + "\nTitle: " + title + "Author: " + author + " Genre:" + genre + " Series: " + series
 				+ " Series Name: " + seriesName + " Number: " + number + " Description: " + description + " Page Count: "
-				+ pageCount + " Release Date: " + releaseDate + " Date Created: " + dateCreated + " Date Updated: "
+				+ pageCount + " Date Created: " + dateCreated + " Date Updated: "
 				+ dateUpdated;
 	}
 

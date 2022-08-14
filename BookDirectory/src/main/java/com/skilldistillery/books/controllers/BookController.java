@@ -78,18 +78,18 @@ public class BookController {
 		return "index";
 	}
 	
-	@RequestMapping(path = "edit.do", method = RequestMethod.GET)
+	@RequestMapping(path="edit.do", method= RequestMethod.GET)
 	public String edit(Model model, @RequestParam int id) {
 		Book book = dao.findById(id);
 		model.addAttribute("book", book);
 		return "edit";
 	}
 	
-	@RequestMapping(path = "edited.do", method = RequestMethod.POST)
-	public String edited(Book book, Model model) {
-		dao.edit(0, book);
-		model.addAttribute("book", book);
-		return "result";
+	@RequestMapping(path="edited.do", method= RequestMethod.POST)
+	public String edited(Book book, Model model, int id) {
+		dao.edit(id, book);
+		model.addAttribute("books", book);
+		return "editSuccess";
 	}
 	
 	@RequestMapping(path = "delete.do", method = RequestMethod.POST)

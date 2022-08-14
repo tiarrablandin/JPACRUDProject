@@ -22,7 +22,14 @@
 				<br>
 				<br>
 				
-			   	${book }<br>
+				Title: ${book.title}<br><br>
+				Author: ${book.author}<br><br>
+				Genre: ${book.genre}<br><br>
+				Part of Series? ${book.series}<br><br>
+				Series Name: ${book.seriesName}<br><br>
+				Book Number in Series: ${book.number}<br><br>
+				Page Count: ${book.pageCount}<br><br>
+				Description: ${book.description}<br><br>
 
 				<form action="edited.do" method="POST">
 					<input type ="hidden" id="id" name="id" value="${book.id }">
@@ -36,10 +43,8 @@
 						value="${book.author}" placeholder="${book.author }" />
 					<br> <br> 
 					
-					<section class="genre">
-						<label for="genre">Genre:</label> <select
-							id="genre" name="genre" value="${book.genre}"
-						placeholder="${book.genre }" >
+					<label for="genre">Genre:</label> 
+					<select class="genre" name="genre" required>
 							<option value=""></option>
 							<option value="Science Fiction">Science Fiction</option>
 							<option value="Urban Fantasy">Urban Fantasy</option>
@@ -48,9 +53,8 @@
 							<option value="Poem">Poem</option>
 							<option value="History">History</option>
 							<option value="Mythology">Mythology</option>
-						</select>
-					</section>
-					<br> 
+					</select>
+					<br> <br>
 					
 					<section class="series">
 						<label for="series">Series:</label> <select
@@ -82,12 +86,6 @@
 						name="pageCount" value="${book.pageCount}"
 						placeholder="${book.pageCount }" /> 
 					<br> <br>
-					
-					<%-- Release Date: <input type="date" id="releaseDate"
-						name="releaseDate" value="${book.releaseDate}"
-						placeholder="${book.releaseDate }" /> 
-					<br> <br> --%>
-
 					
 					<input type="submit" value="Update" />
 
