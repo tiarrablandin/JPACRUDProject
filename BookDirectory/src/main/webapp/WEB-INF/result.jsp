@@ -55,7 +55,7 @@
 		      <td>
 		      	<form action="edit.do?id=${book.id }" method="GET">
 		      	<input type="hidden" value="${book.id }" name="id"/>
-		      	<button class="edit" type="submit">Edit</button>
+		      	<button class="edit" type="submit">Edit ${book.id }</button>
 		      	</form>
 		      </td>
 		      

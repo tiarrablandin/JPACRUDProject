@@ -75,7 +75,7 @@ public class BookController {
 	public String added(Book book, Model model) {
 		dao.add(book);
 		model.addAttribute("book", book);
-		return "result";
+		return "index";
 	}
 	
 	@RequestMapping(path = "edit.do", method = RequestMethod.GET)

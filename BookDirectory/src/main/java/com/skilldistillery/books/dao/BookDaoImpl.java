@@ -1,6 +1,5 @@
 package com.skilldistillery.books.dao;
 
-import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -99,7 +98,7 @@ public class BookDaoImpl implements BookDAO {
 			updtdBook.setNumber(book.getNumber());
 			updtdBook.setDescription(book.getDescription());
 			updtdBook.setPageCount(book.getPageCount());
-			updtdBook.setReleaseDate(book.getReleaseDate());
+//			updtdBook.setReleaseDate(book.getReleaseDate());
 		}
 
 		return updtdBook;
@@ -113,7 +112,7 @@ public class BookDaoImpl implements BookDAO {
 		if (deletedBook != null) {
 			em.remove(deletedBook);
 			
-			successfulDelete = em.contains(deletedBook);
+			successfulDelete = ! em.contains(deletedBook);
 		}
 
 		return successfulDelete;

@@ -24,7 +24,7 @@
 				
 			   	${book }<br>
 
-				<form action="edited.do" method="GET">
+				<form action="edited.do" method="POST">
 					<input type ="hidden" id="id" name="id" value="${book.id }">
 					<br> 
 					
@@ -67,11 +67,26 @@
 						id="seriesName" name="seriesName" value="${book.seriesName}"
 						placeholder="${book.seriesName }" /> 
 					<br> <br>
+					
+					Number in Series: <input type="text"
+						id="number" name="number" value="${book.number}"
+						placeholder="${book.number }" /> 
+					<br> <br>
 
 					Description: <input type="text" id="description"
 						name="description" value="${book.description}"
 						placeholder="${book.description }" /> 
 					<br> <br>
+					
+					Page Count: <input type="text" id="pageCount"
+						name="pageCount" value="${book.pageCount}"
+						placeholder="${book.pageCount }" /> 
+					<br> <br>
+					
+					<%-- Release Date: <input type="date" id="releaseDate"
+						name="releaseDate" value="${book.releaseDate}"
+						placeholder="${book.releaseDate }" /> 
+					<br> <br> --%>
 
 					
 					<input type="submit" value="Update" />
