@@ -170,10 +170,10 @@ public class Book {
 
 	@Override
 	public String toString() {
-		return "Book [id=" + id + ", title=" + title + ", author=" + author + ", genre=" + genre + ", series=" + series
-				+ ", seriesName=" + seriesName + ", number=" + number + ", description=" + description + ", pageCount="
-				+ pageCount + ", releaseDate=" + releaseDate + ", dateCreated=" + dateCreated + ", dateUpdated="
-				+ dateUpdated + "]";
+		return "Book ID: " + id + "Title: " + title + "Author: " + author + " Genre:" + genre + " Series: " + series
+				+ " Series Name: " + seriesName + " Number: " + number + " Description: " + description + " Page Count: "
+				+ pageCount + " Release Date: " + releaseDate + " Date Created: " + dateCreated + " Date Updated: "
+				+ dateUpdated;
 	}
 
 }

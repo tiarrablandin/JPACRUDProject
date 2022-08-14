@@ -31,7 +31,7 @@ public class BookDaoImpl implements BookDAO {
 	}
 
 	@Override
-	public List<Book> findByTitle(List<Book> title) {
+	public List<Book> findByTitle(String title) {
 		List<Book> bookList = new ArrayList<Book>();
 		String jpql = "SELECT b FROM Book b WHERE b.title LIKE :title";
 		bookList = em.createQuery(jpql, Book.class)
@@ -41,30 +41,43 @@ public class BookDaoImpl implements BookDAO {
 	}
 
 	@Override
-	public List<Book> findByAuthor(List<Book> author) {
-		String jpql = "SELECT b FROM Book b WHERE author LIKE ?";
-		return em.createQuery(jpql, Book.class).getResultList();
+	public List<Book> findByAuthor(String author) {
+		List<Book> bookList = new ArrayList<Book>();
+		String jpql = "SELECT b FROM Book b WHERE b.author LIKE :author";
+		bookList = em.createQuery(jpql, Book.class)
+				 .setParameter("author", "%" + author + "%")
+				 .getResultList();
+	return bookList;
 	}
 
 	@Override
-	public List<Book> findByGenre(List<Book> genre) {
-		String jpql = "SELECT b FROM Book b WHERE genre LIKE ?";
-		
-		return em.createQuery(jpql, Book.class).getResultList();
+	public List<Book> findByGenre(String genre) {
+		List<Book> bookList = new ArrayList<Book>();
+		String jpql = "SELECT b FROM Book b WHERE b.genre LIKE :genre";
+		bookList = em.createQuery(jpql, Book.class)
+				 .setParameter("genre", "%" + genre + "%")
+				 .getResultList();
+	return bookList;
 	}
 
 	@Override
-	public List<Book> findBySeriesName(List<Book> seriesName) {
-		String jpql = "SELECT b FROM Book b WHERE series_name LIKE ?";
-		
-		return em.createQuery(jpql, Book.class).getResultList();
+	public List<Book> findBySeriesName(String seriesName) {
+		List<Book> bookList = new ArrayList<Book>();
+		String jpql = "SELECT b FROM Book b WHERE b.seriesName LIKE :seriesName";
+		bookList = em.createQuery(jpql, Book.class)
+				 .setParameter("seriesName", "%" + seriesName + "%")
+				 .getResultList();
+	return bookList;
 	}
 
 	@Override
-	public List<Book> findByDescription(List<Book> description) {
-		String jpql = "SELECT b FROM Book b WHERE description LIKE ?";
-		
-		return em.createQuery(jpql, Book.class).getResultList();
+	public List<Book> findByDescription(String description) {
+		List<Book> bookList = new ArrayList<Book>();
+		String jpql = "SELECT b FROM Book b WHERE b.description LIKE :description";
+		bookList = em.createQuery(jpql, Book.class)
+				 .setParameter("description", "%" + description + "%")
+				 .getResultList();
+	return bookList;
 	}
 
 	@Override
@@ -74,7 +87,7 @@ public class BookDaoImpl implements BookDAO {
 	}
 
 	@Override
-	public Book update(int id, Book book) {
+	public Book edit(int id, Book book) {
 		Book updtdBook = em.find(Book.class, id);
 
 		if (updtdBook != null) {

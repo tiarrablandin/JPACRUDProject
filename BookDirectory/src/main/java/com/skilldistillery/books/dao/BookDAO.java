@@ -10,19 +10,19 @@ public interface BookDAO {
 	
 	List<Book> findAll();
 	
-	List<Book> findByTitle(List<Book> title);
+	List<Book> findByTitle(String title);
 	
-	List<Book> findByAuthor(List<Book> author);
+	List<Book> findByAuthor(String author);
 	
-	List<Book> findByGenre(List<Book> genre);
+	List<Book> findByGenre(String genre);
 	
-	List<Book> findBySeriesName(List<Book> seriesName);
+	List<Book> findBySeriesName(String seriesName);
 	
-	List<Book> findByDescription(List<Book> description);
+	List<Book> findByDescription(String description);
 	
 	public Book add(Book book);
 	
-	public Book update(int id, Book book);
+	public Book edit(int id, Book book);
 
 	public boolean delete(int id);
 	
