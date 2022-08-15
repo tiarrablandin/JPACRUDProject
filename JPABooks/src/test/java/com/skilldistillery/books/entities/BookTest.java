@@ -50,7 +50,7 @@ class BookTest {
 		assertEquals("Test", book.getAuthor());
 		assertEquals("Test", book.getGenre());
 		assertEquals(false, book.isSeries());
-		assertEquals(null, book.getSeriesName());
+		assertEquals("Test", book.getSeriesName());
 		assertEquals(null, book.getNumber());
 		assertEquals("Test", book.getDescription());
 		assertEquals(null, book.getPageCount());
