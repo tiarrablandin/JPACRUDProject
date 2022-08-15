@@ -19,7 +19,7 @@
 	
 	<div>
 		<table class="table table-striped table-hover table-md">
-		  <thead class="table-dark">
+		  <thead>
 		    <tr>
 		      <th scope="col">ID</th>
 		      <th scope="col">Title</th>
@@ -53,7 +53,7 @@
 		      <td>
 		      	<form action="edit.do?id=${book.id }" method="GET">
 		      	<input type="hidden" value="${book.id }" name="id"/>
-		      	<button class="edit" type="submit">Edit ${book.id }</button>
+		      	<button class="button" type="submit">Edit ${book.id }</button>
 		      	</form>
 		      </td>
 		      

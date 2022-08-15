@@ -72,12 +72,7 @@
 						name="pageCount" value="${book.pageCount}" /> 
 					<br> <br>
 					
-					<%-- Release Date: <input type="date" id="releaseDate"
-						name="releaseDate" value="${book.releaseDate}" /> 
-					<br> <br> --%>
-
-					
-					<input type="submit" value="Add" />
+					<input class="button" type="submit" value="Add" />
 
 				</form>
 

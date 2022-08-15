@@ -1,9 +1,43 @@
 @charset "UTF-8";
 
 body {
-  background-color: gray;
+ background-color: #E6E6FA;
+ font-family: papyrus;
+ color: #4B0082;
 }
-table, th, td {
+
+table, td {
   border: 1px solid;
   text-align: center;
+  color: #4B0082;
+}
+
+th{
+	color: #F0FFF0;
+}
+
+thead{
+	color: #F0FFF0;
+	background-color: #4B0082;
+}
+
+h1{
+	font-family: papyrus, bold;
+	font-size: 75px;
+	text-align: center;
+}
+	
+h2{
+	text-align: center;
+}
+
+.button {
+  background-color: #F0FFF0;
+  border: 2px solid #FFFFF0;
+  padding: 5px 15px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
+  color: #4B0082
 }

@@ -87,14 +87,14 @@
 						placeholder="${book.pageCount }" /> 
 					<br> <br>
 					
-					<input type="submit" value="Update" />
+					<input class="button" type="submit" value="Update" />
 
 				</form>
 
 				<form action="delete.do" method="POST">
 					<input type="hidden" id="id" name="id" value="${book.id }"/>
 					
-					<input type="submit" value="Delete" />
+					<br><input class="button" type="submit" value="Delete" />
 				</form>
 				
 		</c:when>
